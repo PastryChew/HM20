@@ -32,17 +32,20 @@ public class Practise : MonoBehaviour
     {
         int min = arr[0];
         int temp = 0;
-        for (int k = 0; k < arr.Length - 1; k++)
+        for (int k = 0; k < arr.Length; k++)
         {
-
-            for (int i = k +1; i < arr.Length; i++)
+            min = k;
+            for (int i = k + 1; i < arr.Length; i++)
             {
-                if (arr[i] < min)
+                if (arr[i] < arr[min])
                 {
-                    min = arr[i];
+                    min = i;
                 }
             }
-
+            temp = arr[min];
+            arr[min] = arr[k];
+            arr[k] = temp;
+            
           
         }
 
