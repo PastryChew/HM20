@@ -6,25 +6,24 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class StartTimeline : MonoBehaviour
 {
-    public PlayableDirector timeline;
-    public GameObject player;
+    [SerializeField] private PlayerCheck PlayerCheck;
+    [SerializeField] private PlayableDirector timeline;
+    [SerializeField] private GameObject player;
+    [SerializeField] private ThirdPersonUserControl UserControl;
 
-    bool playScene = false;
-    
+    private bool playScene;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         timeline = GetComponent<PlayableDirector>();
+        UserControl = player.gameObject.GetComponent<ThirdPersonUserControl>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && player.gameObject.GetComponent<PlayerCheck>().cutscene)
+        if (Input.GetKeyDown(KeyCode.E) && PlayerCheck.cutscene)
         {
-            player.gameObject.GetComponent<ThirdPersonUserControl>().enabled = false;
-
+            UserControl.enabled = false;
             player.transform.localPosition = Vector3.zero;
             player.transform.localRotation = Quaternion.Euler(0, 90, 0);
             timeline.Play();
@@ -34,9 +33,7 @@ public class StartTimeline : MonoBehaviour
         if (timeline.state != PlayState.Playing && playScene)
         {
             playScene = false;
-            player.gameObject.GetComponent<ThirdPersonUserControl>().enabled = true;
+            UserControl.enabled = true;
         }
-       
     }
-
 }

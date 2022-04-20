@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class AnimationSwitch : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
 
-    public Animator anim;
-   
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        SwitchAnim();
     }
 
     public void SwitchAnim()
@@ -36,13 +37,6 @@ public class AnimationSwitch : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             anim.SetInteger("NumberOfAnim", 0);
-            
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        SwitchAnim();
     }
 }

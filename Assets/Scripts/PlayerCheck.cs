@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCheck : MonoBehaviour
 {
-     public bool cutscene = false;
+    public bool cutscene { get; set; }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +13,7 @@ public class PlayerCheck : MonoBehaviour
             cutscene = true;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Stairs"))
@@ -20,6 +21,4 @@ public class PlayerCheck : MonoBehaviour
             cutscene = false;
         }
     }
-
-
 }

@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class WeaponSwitcher : MonoBehaviour
 {
-    public int weaponSwitch = 0;
+    [SerializeField] private GameObject shield;
 
-    bool TakeShield = true;
-    public GameObject shield;
+    private bool TakeShield;
+    private int weaponSwitch;
 
-    void Start()
+    private void Start()
     {
+        TakeShield = true;
+
         SelectWeapon();
     }
 
-    
-    void Update()
+    private void Update()
     {
         int currentWeapon = weaponSwitch;
 
@@ -48,7 +49,6 @@ public class WeaponSwitcher : MonoBehaviour
             ShieldActive();
         }
         
-
         if (currentWeapon != weaponSwitch)
         {
             SelectWeapon();
@@ -58,6 +58,7 @@ public class WeaponSwitcher : MonoBehaviour
     public void SelectWeapon()
     {
         int i=0;
+
         foreach (Transform weapon in transform)
         {
             if (i == weaponSwitch)

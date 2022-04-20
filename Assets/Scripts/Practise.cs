@@ -6,14 +6,13 @@ using Random = System.Random;
 
 public class Practise : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+   private void Start()
+   {
        int[] arr =  SetArray(10);
         
         SecondSort(arr);
         WriteArray(arr);
-    }
+   }
 
    private int[] SetArray(int Length)
     {
@@ -32,6 +31,7 @@ public class Practise : MonoBehaviour
     {
         int min = arr[0];
         int temp = 0;
+
         for (int k = 0; k < arr.Length; k++)
         {
             min = k;
@@ -45,25 +45,7 @@ public class Practise : MonoBehaviour
             temp = arr[min];
             arr[min] = arr[k];
             arr[k] = temp;
-            
-          
         }
-
-
-        //int temp = 0;
-        //for (int i = 0; i < arr.Length; i++)
-        //{
-        //    for (int k = 0; k < arr.Length - i - 1; k++)
-        //    {
-        //        if (arr[k] > arr[k + 1])
-        //        {
-        //            temp = arr[k];
-        //            arr[k] = arr[k + 1];
-        //            arr[k + 1] = temp;
-        //        }
-        //    }
-        //}
-
     }
 
     private void WriteArray(int[] arr)
@@ -73,6 +55,4 @@ public class Practise : MonoBehaviour
             Debug.Log(item);
         }
     }
-
-
 }
