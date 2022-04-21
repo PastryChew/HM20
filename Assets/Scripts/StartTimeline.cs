@@ -12,6 +12,7 @@ public class StartTimeline : MonoBehaviour
     [SerializeField] private ThirdPersonUserControl UserControl;
 
     private bool playScene;
+    private bool Cut;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class StartTimeline : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && PlayerCheck.cutscene)
+        if (Input.GetKeyDown(KeyCode.E) && Cut)
         {
             UserControl.enabled = false;
             player.transform.localPosition = Vector3.zero;
@@ -35,5 +36,10 @@ public class StartTimeline : MonoBehaviour
             playScene = false;
             UserControl.enabled = true;
         }
+    }
+
+    public void GetBoolCheck(bool cutscene)
+    {
+        Cut = cutscene;
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerCheck : MonoBehaviour
 {
-    public bool cutscene { get; set; }
+    [SerializeField] private StartTimeline StartTimeline;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Stairs"))
         {
-            cutscene = true;
+            StartTimeline.GetBoolCheck(true);
         }
     }
 
@@ -18,7 +18,7 @@ public class PlayerCheck : MonoBehaviour
     {
         if (other.CompareTag("Stairs"))
         {
-            cutscene = false;
+            StartTimeline.GetBoolCheck(false);
         }
     }
 }
