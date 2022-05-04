@@ -2092,7 +2092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 377480857}
   - component: {fileID: 377480856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PostProcess Volume 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2111,8 +2111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 0}
-  isGlobal: 0
+  sharedProfile: {fileID: 11400000, guid: 9c439424b6b667d439f24d885ca0fc26, type: 2}
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
@@ -3210,7 +3210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666844055}
-  m_LocalRotation: {x: 0.07515425, y: 0.7031016, z: -0.07515424, w: 0.70310163}
+  m_LocalRotation: {x: 0.07515426, y: 0.7031016, z: -0.075154245, w: 0.70310163}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4404,7 +4404,7 @@ GameObject:
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4469,7 +4469,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.07515427, y: 0.70310163, z: -0.075154245, w: 0.7031016}
+  m_LocalRotation: {x: 0.075154275, y: 0.70310163, z: -0.07515425, w: 0.7031016}
   m_LocalPosition: {x: 196.39, y: 15.85, z: 84.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -19996,7 +19996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667796214}
   m_LocalRotation: {x: -0.18643013, y: 0.36702248, z: 0.075446926, w: 0.9082104}
-  m_LocalPosition: {x: 103.935974, y: 198.58974, z: -13.976219}
+  m_LocalPosition: {x: 101.90431, y: 195.7921, z: -15.723381}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 605515363}
